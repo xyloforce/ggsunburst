@@ -318,7 +318,7 @@ def py_sunburst_data(input, type="newick", sep="\t", ladderize=False, ultrametri
     # load input file into a ete tree object
     t = ''
     if type == "newick":
-        t = Tree(input)
+        t = Tree(input, format=1)
     elif type == "lineage":
         t = build_tree_from_tab(input, sep=sep)
     elif type == "node_parent":
